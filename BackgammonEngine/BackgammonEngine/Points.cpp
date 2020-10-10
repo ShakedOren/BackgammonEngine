@@ -20,7 +20,7 @@ void Point::add_chip(Chip::Color chip_color)
 
 void Point::remove_last_chip()
 {
-	if (chips_on_point_.empty())
+	if (check_if_point_empty())
 	{
 		throw std::exception("Can't remove chip, point in empty");
 	}
@@ -42,6 +42,5 @@ Chip::Color Point::get_first_chip_color()
 
 	return chips_on_point_[0].get_chip_color();
 }
-
 
 } // namespace Backgammon
