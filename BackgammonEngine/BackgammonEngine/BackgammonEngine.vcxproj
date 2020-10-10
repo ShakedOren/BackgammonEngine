@@ -140,7 +140,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Board.cpp" />
-    <ClCompile Include="Chip.cpp" />
     <ClCompile Include="Points.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
