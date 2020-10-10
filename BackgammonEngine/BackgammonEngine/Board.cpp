@@ -2,6 +2,23 @@
 
 namespace Backgammon
 {
+
+Board::Board()
+{
+	players_.emplace_back(Chip::Color::WHITE);
+	players_.emplace_back(Chip::Color::WHITE);
+}
+
+Player& Board::get_player(int player_id)
+{
+	if (players_.size() <= player_id)
+	{
+		// Exceptions
+	}
+
+	return players_[player_id];
+}
+
 void Board::print_board()
 {
 	auto full_board = get_full_board();
@@ -21,8 +38,8 @@ void Board::print_board()
 
 std::vector<Point> Board::get_full_board()
 {
-	std::vector<Point> player1_points = player1_.get_points();
-	std::vector<Point> player2_points = player2_.get_points();
+	std::vector<Point> player1_points = get_player(0).get_points();
+	std::vector<Point> player2_points = get_player(1).get_points();
 	std::vector<Point> full_board(Player::NUM_OF_POINTS);
 	std::reverse(player2_points.begin(), player2_points.end());
 
@@ -39,6 +56,11 @@ std::vector<Point> Board::get_full_board()
 	}
 
 	return full_board;
+}
+
+void Board::move_chip(int player_id, int src_point, int dst_point)
+{
+	get_player(player_id).move_chip(src_point, dst_point);
 }
 
 } // namespace Backgammon
