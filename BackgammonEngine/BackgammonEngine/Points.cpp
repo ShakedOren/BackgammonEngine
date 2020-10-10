@@ -1,5 +1,7 @@
 #include "Points.h"
 
+#include <exception>
+
 namespace Backgammon
 {
 
@@ -20,10 +22,25 @@ void Point::remove_last_chip()
 {
 	if (chips_on_point_.empty())
 	{
-
+		throw std::exception("Can't remove chip, point in empty");
 	}
 
 	chips_on_point_.pop_back();
+}
+
+bool Point::check_if_point_empty()
+{ 
+	return chips_on_point_.empty(); 
+}
+
+Chip::Color Point::get_first_chip_color()
+{
+	if (check_if_point_empty())
+	{
+		throw std::exception("Can't get first chip color, point in empty");
+	}
+
+	return chips_on_point_[0].get_chip_color();
 }
 
 

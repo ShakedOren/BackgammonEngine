@@ -14,6 +14,8 @@ public:
 
 public:
 	Chip(Color chip_color) : chip_color_(chip_color) {};
+	
+	Color get_chip_color() { return chip_color_; };
 
 private:
 	Color chip_color_;

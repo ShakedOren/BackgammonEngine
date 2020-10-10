@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30523.141
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BackgammonEngine", "BackgammonEngine\BackgammonEngine.vcxproj", "{099B1B56-9692-48BA-97C7-17C087E6E1B8}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BackgammonEngineTest", "BackgammonEngineTest\BackgammonEngineTest.vcxproj", "{FF421716-D7C8-4DAB-94B1-E3A398F1DF0A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{099B1B56-9692-48BA-97C7-17C087E6E1B8}.Release|x64.Build.0 = Release|x64
 		{099B1B56-9692-48BA-97C7-17C087E6E1B8}.Release|x86.ActiveCfg = Release|Win32
 		{099B1B56-9692-48BA-97C7-17C087E6E1B8}.Release|x86.Build.0 = Release|Win32
+		{FF421716-D7C8-4DAB-94B1-E3A398F1DF0A}.Debug|x64.ActiveCfg = Debug|x64
+		{FF421716-D7C8-4DAB-94B1-E3A398F1DF0A}.Debug|x64.Build.0 = Debug|x64
+		{FF421716-D7C8-4DAB-94B1-E3A398F1DF0A}.Debug|x86.ActiveCfg = Debug|Win32
+		{FF421716-D7C8-4DAB-94B1-E3A398F1DF0A}.Debug|x86.Build.0 = Debug|Win32
+		{FF421716-D7C8-4DAB-94B1-E3A398F1DF0A}.Release|x64.ActiveCfg = Release|x64
+		{FF421716-D7C8-4DAB-94B1-E3A398F1DF0A}.Release|x64.Build.0 = Release|x64
+		{FF421716-D7C8-4DAB-94B1-E3A398F1DF0A}.Release|x86.ActiveCfg = Release|Win32
+		{FF421716-D7C8-4DAB-94B1-E3A398F1DF0A}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
