@@ -1,8 +1,8 @@
 #pragma once
 
-#include "Player.h"
-
 #include <iostream>
+
+#include "Points.h"
 
 namespace Backgammon
 {
@@ -10,30 +10,29 @@ namespace Backgammon
 class Board
 {
 public:
-	enum class PlayerId
+	static constexpr int NUM_OF_POINTS_ON_BOARD = 24;
+
+public:
+	enum class PlayerChipsColor
 	{
-		PLAYER1 = 0,
-		PLAYER2 = 1,
+		WHITE = 0,
+		BLACK = 1,
 	};
+
 public:
 	Board();
-	
-	Player& get_player(PlayerId player_id);
 
 	void print_board();
-	void move_chip(PlayerId player_id, int src_point, int dst_point);
-
-	
-private:
-	std::vector<Player> players_;
+	void move_white_chip(int start_pos, int end_pos);
+	void move_black_chip(int start_pos, int end_pos);
 
 private:
-	std::vector<Point> get_full_board();
-	bool check_if_move_valid(PlayerId player_id, int src_point, int dst_point);
-	bool check_if_point_is_empty(PlayerId player_id, int point_id);
-	PlayerId get_other_player_id(PlayerId player_id);
-	int pos_from_end_to_pos_from_start(int point_id_from_end);
-};
+	std::vector<Point> board_;
+
+private:
+	void init_white_points();
+	void init_black_points();
+};	
 
 } // namespace Backgammon
 
