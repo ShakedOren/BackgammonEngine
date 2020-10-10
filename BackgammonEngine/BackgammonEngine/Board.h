@@ -10,12 +10,15 @@ namespace Backgammon
 class Board
 {
 public:
-	Board() = default;
+	Board() : player1_(Chip::Color::WHITE), player2_(Chip::Color::BLACK) {};
 	
-	void print_board();
 	Player& get_player1() { return player1_; };
 	Player& get_player2() { return player2_; };
 
+	void print_board();
+	void move_chip(int src_point, int dst_point);
+
+	
 private:
 	Player player1_;
 	Player player2_;

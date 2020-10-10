@@ -6,7 +6,7 @@ void Board::print_board()
 {
 	auto full_board = get_full_board();
 	
-	int bla = Player::NUM_OF_POINTS / 2;
+	unsigned int bla = Player::NUM_OF_POINTS / 2;
 	for (size_t i = 0; i < bla; i++)
 	{
 		std::cout << full_board[i].get_num_of_chips_on_point() << " ";
@@ -21,8 +21,8 @@ void Board::print_board()
 
 std::vector<Point> Board::get_full_board()
 {
-	std::vector<Point> player1_points = player1_.get_points_();
-	std::vector<Point> player2_points = player2_.get_points_();
+	std::vector<Point> player1_points = player1_.get_points();
+	std::vector<Point> player2_points = player2_.get_points();
 	std::vector<Point> full_board(Player::NUM_OF_POINTS);
 	std::reverse(player2_points.begin(), player2_points.end());
 
