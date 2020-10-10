@@ -13,13 +13,6 @@ public:
 	static constexpr int NUM_OF_POINTS_ON_BOARD = 24;
 
 public:
-	enum class PlayerChipsColor
-	{
-		WHITE = 0,
-		BLACK = 1,
-	};
-
-public:
 	Board();
 
 	void print_board();

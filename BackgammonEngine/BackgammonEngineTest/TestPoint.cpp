@@ -3,6 +3,7 @@
 
 namespace Backgammon
 {
+
 TEST(BackgammonTest, test_add_chip)
 {
 	Point point;
