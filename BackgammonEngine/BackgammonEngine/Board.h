@@ -23,6 +23,8 @@ public:
 	Board();
 
 	void print_board();
+	void move_white_chip(int start_pos, int end_pos);
+	void move_black_chip(int start_pos, int end_pos);
 
 private:
 	std::vector<Point> board_;
@@ -30,8 +32,6 @@ private:
 private:
 	void init_white_points();
 	void init_black_points();
-	void init_points(std::vector<Point>::iterator board_start, Chip::Color chip_color);
-	void init_points(std::vector<Point>::reverse_iterator board_start, Chip::Color chip_color);
 };	
 
 } // namespace Backgammon
