@@ -6,7 +6,19 @@ namespace Backgammon
 Board::Board()
 	: board_(NUM_OF_POINTS_ON_BOARD)
 {
+	init_white_points();
+	init_black_points();
+}
 
+void Board::print_board()
+{
+	int curr_num_of_chips_on_point = 0;
+	for (const auto& point : board_)
+	{
+		point.print_point();	
+	}
+
+	std::cout << std::endl;
 }
 
 void Board::init_white_points()
@@ -34,4 +46,5 @@ void Board::init_points(std::vector<Point>::reverse_iterator board_start, Chip::
 	(board_start + 16)->set_num_of_chips_on_point(3, chip_color);
 	(board_start + 18)->set_num_of_chips_on_point(5, chip_color);
 }
+
 } // namespace Backgammon

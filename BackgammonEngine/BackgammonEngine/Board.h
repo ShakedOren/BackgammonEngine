@@ -22,6 +22,8 @@ public:
 public:
 	Board();
 
+	void print_board();
+
 private:
 	std::vector<Point> board_;
 
