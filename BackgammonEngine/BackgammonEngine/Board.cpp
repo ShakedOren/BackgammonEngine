@@ -6,8 +6,8 @@ namespace Backgammon
 Board::Board()
 	: board_(NUM_OF_POINTS_ON_BOARD)
 {
-	init_board<>(board_.begin(), Chip::Color::WHITE);
-	init_board<>(board_.rbegin(), Chip::Color::BLACK);
+	init_board(board_.begin(), Chip::Color::WHITE);
+	init_board(board_.rbegin(), Chip::Color::BLACK);
 }
 
 void Board::print_board()

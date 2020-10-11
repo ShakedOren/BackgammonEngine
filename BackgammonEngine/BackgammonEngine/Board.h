@@ -21,11 +21,11 @@ public:
 
 private:
 	std::vector<Point> board_;
-
-};	
+};
 
 template <class T>
-void init_board(T board_start, Chip::Color chip_color) {
+void init_board(T board_start, Chip::Color chip_color)
+{
 	board_start->set_num_of_chips_on_point(2, chip_color);
 	(board_start + 11)->set_num_of_chips_on_point(5, chip_color);
 	(board_start + 16)->set_num_of_chips_on_point(3, chip_color);
@@ -33,9 +33,21 @@ void init_board(T board_start, Chip::Color chip_color) {
 }
 
 template <class T>
-void move_chip(T board_start, int start_pos, int end_pos, Chip::Color chip_color) {
+void move_chip(T board_start, int start_pos, int end_pos, Chip::Color chip_color)
+{
 	(board_start + start_pos)->remove_last_chip();
 	(board_start + end_pos)->add_chip(chip_color);
+}
+
+template <class T>
+bool check_move_valid(T board_start, int start_pos, int end_pos, Chip::Color chip_color)
+{
+	if (board_start + start_pos)->check_if_point_empty())
+	{
+		return false;
+	}
+
+	return true;
 }
 
 } // namespace Backgammon
